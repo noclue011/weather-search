@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Sets the title of the webpage-->
+    <title>Weather Search Page</title>
+
+      <!--Links to the CSS styling page-->
+      <link rel="stylesheet" href="Weather Search.css">
+  </head>
+<body>
+
+<!-- Identifies the current page with a header-->
+<h1>Search for Weather</h1>
+
+<!--The following lines are directly from bootstrap to create the form for data entry-->
+
+<!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+
+<!-- Inline CSS based on choices in "Settings" tab -->
+<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+<div class="bootstrap-iso">
+ <div class="container-fluid">
+  <div class="row">
+   <div class="col-md-6 col-sm-6 col-xs-12">
+    <form method="post">
+     <div class="form-group ">
+       <label class="instructions">Enter Latitude & Longitude for a US city</label>
+       <label class="instructions">(Aything other than a US city will not produce results)</label>
+      <label class="Latitude-label" for="number">
+       Latitude
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="Latitude" id="Latitude" name="Latitude" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="longitude-label" for="number1">
+       Longitude
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="Longitude" id="Longitude" name="Longitude" type="text"/>
+     </div>
+     <div class="form-group">
+      <div>
+        <!--Calls a javascript function when the button is clicked-->
+       <input type="button" id="btn-primary" onClick="changeWeather()" value="Submit"/>
+      </div>
+     </div>
+    </form>
+   </div>
+  </div>
+ </div>
+</div>
+
+<!--Labels the section for the forecast, creates a general container that contains individual containers for each day/night
+of the forecast, and creates each section of text that will be filled by the API call in javascript-->
+<h3>7 day forecast:</h3>
+<div class = "multiday-forecast">
+  <div class = "forecast-container">
+    <p class = "day1">Day 1</p>
+    <p class = "day1-temp"></p>
+    <p class = "day1-forecast"></p><br>
+  </div>
+  <div class = "forecast-container">
+    <p class = "night1">Night 1</p>
+    <p class = "night1-temp"></p>
+    <p class = "night1-forecast"></p><br>
+  </div>
+  <div class = "forecast-container">
+    <p class = "day2">Day 2</p>
+    <p class = "day2-temp"></p>
+    <p class = "day2-forecast"></p><br>
+  </div>
+  <div class = "forecast-container">
+    <p class = "night2"> Night 2</p>
+    <p class = "night2-temp"></p>
+    <p class = "night2-forecast"></p><br>
+  </div>
+  <div class = "forecast-container">
+    <p class = "day3"> Day 3</p>
+    <p class = "day3-temp"></p>
+    <p class = "day3-forecast"></p><br>
+  </div>
+  <div class = "forecast-container">
+    <p class = "night3"> Night 3</p>
+    <p class = "night3-temp"></p>
+    <p class = "night3-forecast"></p><br>
+  </div>
+  <div class = "forecast-container">
+    <p class = "day4">Day 4</p>
+    <p class = "day4-temp"></p>
+    <p class = "day4-forecast"></p><br>
+  </div>
+  <div class = "forecast-container">
+    <p class = "night4">Night 4</p>
+    <p class = "night4-temp"></p>
+    <p class = "night4-forecast"></p><br>
+  </div>
+  <div class = "forecast-container">
+    <p class = "day5">Day 5</p>
+    <p class = "day5-temp"></p>
+    <p class = "day5-forecast"></p><br>
+  </div>
+  <div class = "forecast-container">
+    <p class = "night5">Night 5</p>
+    <p class = "night5-temp"></p>
+    <p class = "night5-forecast"></p><br>
+  </div>
+  <div class = "forecast-container">
+    <p class = "day6">Day 6</p>
+    <p class = "day6-temp"></p>
+    <p class = "day6-forecast"></p><br>
+  </div>
+  <div class = "forecast-container">
+    <p class = "night6">Night 6</p>
+    <p class = "night6-temp"></p>
+    <p class = "night6-forecast"></p><br>
+  </div>
+  <div class = "forecast-container">
+    <p class = "day7">Day 7</p>
+    <p class = "day7-temp"></p>
+    <p class = "day7-forecast"></p><br>
+  </div>
+  <div class = "forecast-container">
+    <p class = "night7">Night 7</p>
+    <p class = "night7-temp"></p>
+    <p class = "night7-forecast"></p><br>
+  </div>
+</div>
+
+<!--Ensures that the javascript and JQuery can be used by this webpage-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src = "./weather.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,67 @@
+/*Changes the background color of the page*/
+body {
+    background-color: #53baf5;
+}
+
+/*Makes sure the header is aligned to the center of the page*/
+h1 {
+    text-align: center
+}
+
+/*Makes sure the header is aligned to the center of the page*/
+h3 {
+    text-align: center
+}
+
+/*Makes sure the text is aligned to the center of the page*/
+p {
+    text-align:center
+}
+
+.instructions {
+    text-align:center
+}
+
+/*Aligns the search form to the center of the page and rounds its borders*/
+.bootstrap-iso {
+    max-width: 500px;
+    margin: auto;
+    border-radius: 25px;
+}
+
+/*Ensures the search from itself has a background color, rounded corners, and enough padding to be easy to look at*/
+.row {
+    background-color: #dbf9fc;
+    border-radius: 25px;
+    border: 3px solid #000000;
+    padding-top: 10px;
+}
+
+/*rounds the search button*/
+#btn-primary {
+    border-radius: 12px;
+    background-color: black;
+    color: #fff;
+}
+
+/*This is the parent container for the 7 day forecast containers*/
+.multiday-forecast > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*sets the format for the containers for each day/night of the forecast*/
+.forecast-container {
+    background-color: #dbf9fc;
+    border-radius: 25px;
+    border: 3px solid #000000;
+    padding-top: 10px;
+    width: 200px;
+    margin: auto;
+    height: 200px;
+}
+
+/*Bolds the text identifying each day in the forecast*/
+.day1, .night1, .day2, .night2, .day3, .night3, .day4, .night4, .day5, .night5, .day6, .night6, .day7, .night7 {
+    font-weight: bolder;
+}
